@@ -9,7 +9,7 @@ from mock import patch
 
 
 @patch("argparse.ArgumentParser.parse_args",
-       return_value=argparse.Namespace(file_names="test_file_names"))
+       return_value=argparse.Namespace(file_names=["test1", "test2"]))
 @patch("subprocess.Popen", return_value="anything")
 def test_gits_add_func_1(mock_var1, mock_args):
     """
