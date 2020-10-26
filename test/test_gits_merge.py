@@ -20,7 +20,7 @@ def test_git_create_branch_happy_case(mock_var, mock_args):
     Function to test gits_merge_branch, success case
     """
     mocked_pipe = Mock()
-    attrs = {'communicate.return_value': ('output', 'error'), 'returncode': 0}
+    attrs = {'communicate.return_value': ('output'.encode('UTF-8'), 'error'), 'returncode': 0}
     mocked_pipe.configure_mock(**attrs)
     mock_var.return_value = mocked_pipe
 
