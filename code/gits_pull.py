@@ -16,7 +16,7 @@ def gits_pull(args):
         process0 = subprocess.Popen(untracked_file_check_status,
                                     stdout=PIPE, stderr=PIPE)
         stdout, stderr = process0.communicate()
-        # print(stdout.decode("utf-8"))
+        print(stdout.decode("utf-8"))
 
         if stdout != b'':
             print("Note: Please commit uncommited changes before pulling")
@@ -43,7 +43,7 @@ def gits_pull(args):
         process1 = subprocess.Popen(pull_command, stdout=PIPE, stderr=PIPE)     
         stdout, stderr = process1.communicate()
         print(stdout)
-        # print(stdout.decode("utf-8"))
+        print(stdout.decode("utf-8"))
 
     except Exception as e:
         print("ERROR: gits pull command caught an exception")
