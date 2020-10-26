@@ -14,6 +14,7 @@ def gits_set_profile(args):
         check_val = check(args.email)
         # print(check_val)
         if check_val:
+            print("here")
 
             process = subprocess.Popen(["git", "config", "--global",
                                         "--unset", "user.email"],
@@ -81,6 +82,7 @@ def gits_set_profile(args):
 
         else:
             print("Enter a valid email id")
+            return False
 
     except Exception as e:
         print("ERROR: gits profile command caught an exception")
