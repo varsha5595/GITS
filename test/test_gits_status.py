@@ -16,7 +16,7 @@ def parse_args(args):
 @patch("argparse.ArgumentParser.parse_args",
        return_value=argparse.Namespace())
 @patch("subprocess.Popen")
-def test_gits_track_happy_case(mock_var, mock_args):
+def test_gits_status_happy_case(mock_var, mock_args):
     """
     Function to test gits status, success case
     """
@@ -33,7 +33,7 @@ def test_gits_track_happy_case(mock_var, mock_args):
 @patch("argparse.ArgumentParser.parse_args",
        return_value=argparse.Namespace())
 @patch("subprocess.Popen")
-def test_gits_track_sad_case(mock_var, mock_args):
+def test_gits_status_sad_case(mock_var, mock_args):
     """
     Function to test gits status, failure case
     """
