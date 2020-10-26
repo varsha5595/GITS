@@ -14,6 +14,7 @@ jobs:
   - name: "project-1"
     python: "3.8"
 script:
-  - python -m pytest --flake8 --cov
+  - python -m pytest --flake8
+  - coverage run -m pytest -q test/
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t d9ad46a5-ddae-4e9b-b0db-959bb96541f0
