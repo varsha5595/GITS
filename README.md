@@ -27,8 +27,14 @@ Git-Simplified AKA GITS can be thought of wrapper around major Git functionaliti
     pip install -r requirements.txt
     ```
 3. Go to configurations directory and run the following command
+
+    If you are working on Linux system with a bash terminal or a Windows system using Windows subsystem for linux:
     ```
     bash project_init.sh
+    ```
+    If you are working on Linux system with a fish terminal:
+    ```
+    fish project_init.fish
     ```
    
 # Installation for Windows
