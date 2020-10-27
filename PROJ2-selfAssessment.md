@@ -6,7 +6,7 @@
 || group meetings had a moderator that managed the round robin|4|
 || group meeting moderator rotated among  the group|4|
 || code conforms to some packaging standard|4|
-|| code has can be downloaded from some standard package manager||
+|| code has can be downloaded from some standard package manager|2|
 | |workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|4|
 || Number of commits|4|
 || Number of commits: by different people|4|
@@ -17,9 +17,9 @@
 ||Docs: doco generated , format not ugly |4|
 ||Docs: what: point descriptions of each class/function (in isolation) |4|
 ||Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|4|
-||Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|4|
+||Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|
 ||Docs: 3 minute video, posted to YouTube. That convinces people why they want to work on your code.|4|
-|| (hard) code conforms to some known patterns ||
+|| (hard) code conforms to some known patterns |2|
 |Tools Matter| Use of version control tools|4|
 || Extensive use of version control tools |4|
 || Repo has an up-to-date requirements.txt file|4|
@@ -32,14 +32,14 @@
 || Extensive use of syntax checkers. |4|
 || Use of code coverage |4|
 || Extensive use of code coverage |4|
-|| other automated analysis tools||
-|| Extensive use of  other automated analysis tools||
+|| other automated analysis tools|4|
+|| Extensive use of  other automated analysis tools|4|
 || test cases exist|4|
 || test cases are routinely executed|4|
-| consensus-oriented model| the files CONTRIBUTING.md and CODEOFCONDUCT.md has have multiple edits by multiple people||
+| consensus-oriented model| the files CONTRIBUTING.md and CODEOFCONDUCT.md has have multiple edits by multiple people|4|
 | | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|4|
 | | multiple people contribute to discussions|4|
-|| issues are discussed before they are closed|4|
+|| issues are discussed before they are closed|3|
 || Chat channel: exists|4|
 || Chat channel: is active |4|
 || test cases:.a large proportion of the issues related to handling failing cases.|4|
