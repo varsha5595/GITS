@@ -23,7 +23,6 @@ def gits_pull(args):
             print("Note: Please commit uncommited changes before pulling")
             return False
 
-        print(args)
         arguments = []
         curr_branch = helper.get_current_branch()
         if args.nocommit is True and args.rebase is True:
@@ -40,10 +39,8 @@ def gits_pull(args):
             arguments += [curr_branch]
 
         pull_command = ["git", "pull"] + ["origin"] + arguments
-        print(pull_command)
         process1 = subprocess.Popen(pull_command, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process1.communicate()
-        print(stdout)
         print(stdout.decode("utf-8"))
 
     except Exception as e:

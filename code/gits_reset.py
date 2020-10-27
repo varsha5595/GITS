@@ -15,7 +15,7 @@ def gits_reset(args):
         process2 = subprocess.Popen(
             ['git', 'reset', '--hard', args.branch], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process2.communicate()
-        # print(stdout)
+        print("Current branch reset successful.")
     except Exception as e:
         print("ERROR: gits reset command caught an exception")
         print("ERROR: {}".format(str(e)))

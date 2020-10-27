@@ -38,6 +38,7 @@ def create_branch(args):
         checkout_feature.append(args.b)
         process3 = subprocess.Popen(checkout_feature, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process3.communicate()
+        print("Branch created successfully. Currently you are on branch:", args.b)
 
     except Exception as e:
         print("ERROR: gits create command caught an exception")

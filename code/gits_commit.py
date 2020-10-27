@@ -31,6 +31,7 @@ def gits_commit_func(args):
         process = subprocess.Popen(
             subprocess_command, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process.communicate()
+        print("your changes committed successfully.")
 
     except Exception as e:
         print("ERROR: gits commit command caught an exception")
