@@ -28,7 +28,10 @@ def test_gits_push_happy_case_with_rebase(mock_current_branch, mock_var, mock_ar
 
     mock_args = parse_args(mock_args)
     test_result = gits_push(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -45,7 +48,10 @@ def test_gits_push_sad_case_with_uncommitted_changes(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_push(mock_args)
-    assert False == test_result, "Normal case"
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -63,4 +69,7 @@ def test_gits_push_sad_case_with_no_arguments(mock_current_branch, mock_var, moc
 
     mock_args = parse_args(mock_args)
     test_result = gits_push(mock_args)
-    assert False == test_result, "Normal case"
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

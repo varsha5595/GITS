@@ -22,7 +22,10 @@ def test_gits_rebase_happy_case_current_branch(mock_input, mock_var, mock_args):
     mock_var.return_value = mocked_pipe
 
     test_result = gits_rebase(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -39,7 +42,10 @@ def test_gits_rebase_happy_case_given_branch(mock_input, mock_var, mock_args):
     mock_var.return_value = mocked_pipe
 
     test_result = gits_rebase(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -56,4 +62,7 @@ def test_gits_rebase_sad_case(mock_input, mock_var, mock_args):
     mock_var.return_value = mocked_pipe
 
     test_result = gits_rebase(mock_args)
-    assert False == test_result, "Normal case"
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

@@ -7,4 +7,3 @@ if "code" not in currpath:
         os.chdir(os.path.join("..", "code"))
     else:
         os.chdir("code")
-

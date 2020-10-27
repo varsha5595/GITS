@@ -27,7 +27,10 @@ def test_gits_branch_happy_case(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_branch(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -44,4 +47,7 @@ def test_gits_branch_sad_case(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_branch(mock_args)
-    assert False == test_result, "Normal case"
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

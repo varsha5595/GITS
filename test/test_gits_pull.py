@@ -28,7 +28,10 @@ def test_gits_pull_happy_case_with_no_commit_and_given_branch(mock_current_branc
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -46,7 +49,10 @@ def test_gits_pull_happy_case_with_no_commit_and_current_branch(mock_current_bra
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -64,7 +70,10 @@ def test_gits_pull_happy_case_with_commit_and_given_branch(mock_current_branch, 
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -82,7 +91,10 @@ def test_gits_pull_sad_case_with_no_commit_and_rebase(mock_current_branch, mock_
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -99,7 +111,10 @@ def test_gits_pull_sad_case_with_uncommitted_changes(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -117,4 +132,7 @@ def test_gits_pull_sad_case_with_no_arguments(mock_current_branch, mock_var, moc
 
     mock_args = parse_args(mock_args)
     test_result = gits_pull(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

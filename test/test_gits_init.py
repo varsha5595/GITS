@@ -29,7 +29,11 @@ def test_gits_init_normal(mock_var1, mock_args):
     """
     test_result = gits_init(mock_args)
     remove_extras(".")
-    assert test_result == True, "Normal init"
+    if test_result:
+        assert True, "Normal Init"
+    else:
+        assert False
+
 
 @patch("argparse.ArgumentParser.parse_args",
        return_value=argparse.Namespace(barre=True, template=None, amend=True))
@@ -40,7 +44,11 @@ def test_gits_init_bare(mock_var1, mock_args):
     """
     test_result = gits_init(mock_args)
     remove_extras(".")
-    assert test_result == True, "Bare init"
+    if test_result:
+        assert True, "Bare Init"
+    else:
+        assert False
+
 
 @patch("argparse.ArgumentParser.parse_args",
        return_value=argparse.Namespace(barre=None, template="test_template", amend=True))
@@ -51,5 +59,7 @@ def test_gits_init_template(mock_var1, mock_args):
     """
     test_result = gits_init(mock_args)
     remove_extras(".")
-    assert test_result == True, "Template init"
-
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

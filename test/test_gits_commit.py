@@ -27,7 +27,10 @@ def test_gits_commit_happy_case_with_amend(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_commit_func(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -44,7 +47,10 @@ def test_gits_commit_happy_case_without_amend(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_commit_func(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -61,7 +67,10 @@ def test_gits_commit_sad_case_with_no_message(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_commit_func(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -73,4 +82,7 @@ def test_gits_commit_sad_case_with_no_arguments(mock_err, mock_args):
     """
     mock_args = parse_args(mock_args)
     test_result = gits_commit_func(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

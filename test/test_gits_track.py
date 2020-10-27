@@ -27,7 +27,10 @@ def test_gits_track_happy_case(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_track(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -39,7 +42,10 @@ def test_gits_track_sad_case(mock_err, mock_args):
     """
     mock_args = parse_args(mock_args)
     test_result = gits_track(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -56,4 +62,7 @@ def test_gits_track_happy_case_no_files(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_track(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

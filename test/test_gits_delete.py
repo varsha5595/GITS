@@ -14,7 +14,7 @@ def parse_args(args):
 
 
 @patch("argparse.ArgumentParser.parse_args",
-       return_value=argparse.Namespace(branch = 'branch_name', count = 2))
+       return_value=argparse.Namespace(branch='branch_name', count=2))
 @patch("subprocess.Popen")
 def test_gits_delete_happy_case(mock_var, mock_args):
     """
@@ -27,7 +27,10 @@ def test_gits_delete_happy_case(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_delete(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -39,4 +42,7 @@ def test_gits_delete_sad_case(mock_err, mock_args):
     """
     mock_args = parse_args(mock_args)
     test_result = gits_delete(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

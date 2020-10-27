@@ -15,12 +15,12 @@ def gits_delete(args):
             ['git', 'checkout', args.branch], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process1.communicate()
         process2 = subprocess.Popen(
-            ['git', 'reset', '--hard', "HEAD~"+str(args.count)], stdout=PIPE, stderr=PIPE)
+            ['git', 'reset', '--hard', "HEAD~" + str(args.count)], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process2.communicate()
         process3 = subprocess.Popen(
             ['git', 'push', '--force'], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process3.communicate()
-        print('Last '+str(args.count)+' commits have been deleted')
+        print('Last ' + str(args.count) + ' commits have been deleted')
     except Exception as e:
         print("ERROR: gits reset command caught an exception")
         print("ERROR: {}".format(str(e)))

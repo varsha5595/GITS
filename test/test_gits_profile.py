@@ -27,7 +27,10 @@ def test_gits_profile_happy_case(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_set_profile(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -44,7 +47,10 @@ def test_gits_profile_sad_case_invalid_email(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_set_profile(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -61,4 +67,7 @@ def test_gits_profile_sad_case_no_arguments(mock_var, mock_args):
 
     mock_args = parse_args(mock_args)
     test_result = gits_set_profile(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False

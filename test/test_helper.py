@@ -33,7 +33,10 @@ def test_get_current_branch_sad_case(mock_var):
     mock_var.return_value = mocked_pipe
 
     test_result = get_current_branch()
-    assert None == test_result
+    if not test_result:
+        assert True
+    else:
+        assert False
 
 
 @patch("subprocess.Popen")
@@ -89,6 +92,7 @@ def test_get_trunk_branch_sad_case(mock_var):
     mock_var.return_value = mocked_pipe
 
     test_result = get_current_branch()
-    assert None == test_result
-
-
+    if not test_result:
+        assert True
+    else:
+        assert False

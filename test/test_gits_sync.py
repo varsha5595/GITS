@@ -29,7 +29,10 @@ def test_gits_sync_happy_case_source_branch(mock_main_branch, mock_curr_branch, 
 
     mock_args = parse_args(mock_args)
     test_result = gits_sync(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -48,7 +51,10 @@ def test_gits_sync_happy_case_no_source_branch(mock_main_branch, mock_curr_branc
 
     mock_args = parse_args(mock_args)
     test_result = gits_sync(mock_args)
-    assert True == test_result, "Normal case"
+    if test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -67,7 +73,10 @@ def test_gits_sync_sad_case_uncommitted_changes(mock_main_branch, mock_curr_bran
 
     mock_args = parse_args(mock_args)
     test_result = gits_sync(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True
+    else:
+        assert False
 
 
 @patch("argparse.ArgumentParser.parse_args",
@@ -86,4 +95,7 @@ def test_gits_sync_sad_case_no_arguments(mock_main_branch, mock_curr_branch, moc
 
     mock_args = parse_args(mock_args)
     test_result = gits_sync(mock_args)
-    assert False == test_result
+    if not test_result:
+        assert True, "Normal Case"
+    else:
+        assert False
