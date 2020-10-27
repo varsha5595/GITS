@@ -1,6 +1,6 @@
-# Contributing to GIT Simplified 
+# Contributing to GIT Simplified (GITS)
 
-Thank you so much for taking an interest in contributing! There are many ways to contribute to this porject.
+Thank you so much for taking an interest in contributing! There are many ways to contribute to this project.
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
@@ -12,14 +12,14 @@ Please note we have a code of conduct (CODE_OF_CONDUCT.md), please follow it in 
 1. Maintain GITS project quality.
 2. Should have appropriate ISSUE linked with the Pull request.
 3. The PR should be assigned to the indiividual requesting a merge.
-4. The Reviewers must approve the pull request before merge the code.
+4. The Reviewers must approve the pull request before merging the code.
 5. The description should be updated as to what has been asked in the issue.
-6. All the development code should accompany unit test cases to suppor the validation results.
+6. All the development code should accompany unit test cases to support the validation results.
 7. Travis Builds should be passing while the code is generated.
-8. The development code should be style checked, well formatted and syntax error free. Use of pep8, autoflake8 and flake8 tools will enable the users to get the required code quality.
+8. The development code should be style checked, well-formatted and syntax error free. Use of pep8, autoflake8 and flake8 tools will enable the users to get the required code quality.
 9. Commit messages should company details of the changes been made.
 
-## Bug Report Process
+## Bug Reporting Process
 
 Bugs are tracked as GitHub issues. You need to create an issue and include all the following details if possible.
 
