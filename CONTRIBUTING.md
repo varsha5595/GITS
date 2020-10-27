@@ -1,4 +1,6 @@
-# Contributing
+# Contributing to GIT Simplified 
+
+Thank you so much for taking an interest in contributing! There are many ways to contribute to this porject.
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
