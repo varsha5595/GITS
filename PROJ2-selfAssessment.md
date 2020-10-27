@@ -39,7 +39,7 @@
 | consensus-oriented model| the files CONTRIBUTING.md and CODEOFCONDUCT.md has have multiple edits by multiple people|4|
 | | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|4|
 | | multiple people contribute to discussions|4|
-|| issues are discussed before they are closed|3|
+|| issues are discussed before they are closed|4|
 || Chat channel: exists|4|
 || Chat channel: is active |4|
 || test cases:.a large proportion of the issues related to handling failing cases.|4|
