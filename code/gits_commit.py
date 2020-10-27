@@ -28,7 +28,8 @@ def gits_commit_func(args):
             subprocess_command.append("--amend")
 
         # print(subprocess_command)
-        process = subprocess.Popen(subprocess_command, stdout=PIPE, stderr=PIPE)
+        process = subprocess.Popen(
+            subprocess_command, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process.communicate()
 
     except Exception as e:

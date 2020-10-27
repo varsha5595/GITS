@@ -2,6 +2,7 @@ import subprocess
 from subprocess import PIPE
 import helper
 
+
 def gits_pull(args):
     """
     This function is used to pull remote branch and
@@ -40,7 +41,7 @@ def gits_pull(args):
 
         pull_command = ["git", "pull"] + ["origin"] + arguments
         print(pull_command)
-        process1 = subprocess.Popen(pull_command, stdout=PIPE, stderr=PIPE)     
+        process1 = subprocess.Popen(pull_command, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process1.communicate()
         print(stdout)
         print(stdout.decode("utf-8"))
@@ -51,4 +52,3 @@ def gits_pull(args):
         return False
 
     return True
-

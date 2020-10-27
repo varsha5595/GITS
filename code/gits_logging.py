@@ -15,7 +15,8 @@ def init_gits_logger():
     try:
         global gits_logger
         # format the log entries
-        formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s %(message)s')
+        formatter = logging.Formatter(
+            '%(asctime)s %(name)s %(levelname)s %(message)s')
 
         user_home_dir = str(Path.home())
         gits_logs_dir = os.path.join(user_home_dir, ".gits", "logs")
@@ -25,7 +26,7 @@ def init_gits_logger():
             # do nothing
             pass
         else:
-            print("gits project not initialised, run project_init.sh "\
+            print("gits project not initialised, run project_init.sh "
                   "script from configurations to initialize the project")
             sys.exit(1)
 

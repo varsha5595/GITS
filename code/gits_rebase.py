@@ -13,7 +13,8 @@ def gits_rebase(args):
         print("Is the rebase on current branch?")
         inp = input("[yes/no][y/n]")
         if inp.lower() == "yes" or inp.lower() == "y":
-            process1 = subprocess.Popen(['git', 'rebase', helper.get_trunk_branch_name()], stdout=PIPE, stderr=PIPE)
+            process1 = subprocess.Popen(
+                ['git', 'rebase', helper.get_trunk_branch_name()], stdout=PIPE, stderr=PIPE)
             stdout, stderr = process1.communicate()
             print(stdout.decode("UTF-8"))
         else:

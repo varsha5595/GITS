@@ -19,7 +19,8 @@ def gits_undo(args):
         if total_files != 0:
             for i in range(0, total_files):
                 subprocess_command.append(file_names_list[i])
-            process = subprocess.Popen(subprocess_command, stdout=PIPE, stderr=PIPE)
+            process = subprocess.Popen(
+                subprocess_command, stdout=PIPE, stderr=PIPE)
             stdout, stderr = process.communicate()
 
     except Exception as e:

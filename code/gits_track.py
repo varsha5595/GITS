@@ -19,14 +19,16 @@ def gits_track(args):
         if total_files != 0:
             for i in range(0, total_files):
                 subprocess_command.append(file_names_list[i])
-            process = subprocess.Popen(subprocess_command, stdout=PIPE, stderr=PIPE)
+            process = subprocess.Popen(
+                subprocess_command, stdout=PIPE, stderr=PIPE)
             stdout, stderr = process.communicate()
 
     except Exception as e:
-        gits_logging.gits_logger.error("gits track command caught an exception")
+        gits_logging.gits_logger.error(
+            "gits track command caught an exception")
         gits_logging.gits_logger.error("{}".format(str(e)))
         print("ERROR: gits track command caught an exception")
         print("ERROR: {}".format(str(e)))
         return False
 
-    return True 
+    return True

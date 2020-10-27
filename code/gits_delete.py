@@ -11,11 +11,14 @@ def gits_delete(args):
     """
     print("Hello from GITS command line tools- GITS reset")
     try:
-        process1 = subprocess.Popen(['git', 'checkout', args.branch], stdout=PIPE, stderr=PIPE)
+        process1 = subprocess.Popen(
+            ['git', 'checkout', args.branch], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process1.communicate()
-        process2 = subprocess.Popen(['git', 'reset', '--hard', "HEAD~"+str(args.count)], stdout=PIPE, stderr=PIPE)
+        process2 = subprocess.Popen(
+            ['git', 'reset', '--hard', "HEAD~"+str(args.count)], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process2.communicate()
-        process3 = subprocess.Popen(['git', 'push', '--force'], stdout=PIPE, stderr=PIPE)
+        process3 = subprocess.Popen(
+            ['git', 'push', '--force'], stdout=PIPE, stderr=PIPE)
         stdout, stderr = process3.communicate()
         print('Last '+str(args.count)+' commits have been deleted')
     except Exception as e:
