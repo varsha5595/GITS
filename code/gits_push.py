@@ -20,7 +20,7 @@ def gits_push(args):
             print("Note: Please commit uncommited changes")
             return False
 
-        curr_branch = helper.get_current_branch()
+        _ = helper.get_current_branch()
 
         if args.rebase is not False:
             print("Pulling changes from Upstream source branch and rebasing it")
