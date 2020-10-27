@@ -82,7 +82,7 @@ documentation associated with that file.
 This repository is made for CSC 510 Software Engineering Course at NC State University.
 
 
-## experimentation setup for phase 3
+## Experimentation setup for phase 3
 
 This project aims to ease the developers efforts while interacting with version control system Git. 
 Here are few motivation points behind coming up with this idea:
@@ -105,7 +105,7 @@ However, to remove any unwanted bias here as well, divide the participants in tw
 
 Ask each participants to setup the gits inside their local machine before starting the study using steps shown above.
 
-### Task list
+### Tasks list
 Here is basic draft of the tasks that covers almost each enhancement. 
 Feel free to edit this list as per your convenience. Add few tasks if you got more time for the experiment.
 
