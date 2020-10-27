@@ -1,29 +1,29 @@
 import subprocess
 from subprocess import PIPE
-from helper import get_current_branch, get_trunk_branch_name
+import helper
 
 
 def gits_sync(args):
     try:
-        Untracked_file_check_status = list()
-        Untracked_file_check_status.append("git")
-        Untracked_file_check_status.append("status")
-        Untracked_file_check_status.append("--porcelain")
+        untracked_file_check_status = list()
+        untracked_file_check_status.append("git")
+        untracked_file_check_status.append("status")
+        untracked_file_check_status.append("--porcelain")
 
-        process1 = subprocess.Popen(Untracked_file_check_status,
+        process1 = subprocess.Popen(untracked_file_check_status,
                                     stdout=PIPE, stderr=PIPE)
 
         stdout, stderr = process1.communicate()
 
         if stdout != b'':
             print("Note: Please commit uncommitted changes")
-            exit()
+            return False
 
-        curr_branch = get_current_branch()
+        curr_branch = helper.get_current_branch()
         if args.source:
             source_branch = args.source
         else:
-            source_branch = get_trunk_branch_name()
+            source_branch = helper.get_trunk_branch_name()
 
         print("Checking out source branch..")
         checkout_master = list()
