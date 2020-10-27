@@ -11,7 +11,7 @@ Please note we have a code of conduct (CODE_OF_CONDUCT.md), please follow it in 
 
 1. Maintain GITS project quality.
 2. Should have appropriate ISSUE linked with the Pull request.
-3. The PR should be assigned to the indiividual requesting a merge.
+3. The PR should be assigned to the individual requesting a merge.
 4. The Reviewers must approve the pull request before merging the code.
 5. The description should be updated as to what has been asked in the issue.
 6. All the development code should accompany unit test cases to support the validation results.
@@ -28,7 +28,7 @@ Explain the problem and include additional details to help maintainers reproduce
 1. Before raising a GitHub issue, make sure that you are running the latest version of the application and have all recommended OS updates / patches installed
 2. Use a clear and descriptive title for the issue to identify the problem.
 3. Describe the exact steps which reproduce the problem in as many details as possible. For example, start by explaining how you started Atom, e.g. which command exactly you used in the terminal, or how you started Atom otherwise. When listing steps, don't just say what you did, but explain how you did it. For example, if you moved the cursor to the end of a line, explain if you used the mouse, or a keyboard shortcut or an Atom command, and if so which one?
-4. Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
+4. Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/paste-able snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
 5. Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
 6. Explain which behavior you expected to see instead and why.
 7. Include screenshots and animated GIFs which show you following the described steps and clearly demonstrate the problem.
