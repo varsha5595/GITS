@@ -41,4 +41,3 @@ Bugs are tracked as GitHub issues. You need to create an issue and include all t
 3. Provide specific examples to demonstrate the steps.
 4. Describe the current behavior and explain which behavior you expected to see instead and why.
 5. Explain why this enhancement would be useful to most users and isn't something that can or should be implemented as a community package.
-6. List some other repo or applications where this enhancement / feature exists. ( this is optional )
