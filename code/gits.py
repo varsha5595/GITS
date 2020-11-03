@@ -91,10 +91,6 @@ gits_profile_subparser.add_argument('--name',
                                     required=True,
                                     help='name to be used')
 
-gits_pr_subparser = subparsers.add_parser('pr_update', help='sync help')
-gits_pr_subparser.set_defaults(func=gits_pr_update_func)
-gits_pr_subparser.add_argument('--upstream', nargs='?')
-
 gits_super_reset_subparser = subparsers.add_parser('super-reset')
 gits_super_reset_subparser.add_argument('--name',
                                         help="Name of the repository to super reset")
