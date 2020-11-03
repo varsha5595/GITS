@@ -16,7 +16,6 @@ from gits_reset import gits_reset
 from gits_delete import gits_delete
 
 from gits_profile import gits_set_profile
-from gits_pr_update import gits_pr_update_func
 from gits_track import gits_track
 from gits_untrack import gits_untrack
 from gits_undo import gits_undo
