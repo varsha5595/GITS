@@ -37,11 +37,11 @@ Git-Simplified AKA GITS can be thought of wrapper around major Git functionaliti
     fish project_init.fish
     ```
 4. Source the bashrc file
-    '''
+    ```
     source ~/.bashrc
-    '''
+    ```
     
-    Note: Open the .bashrc file in User home directory to make sure that the alias command does not has any white spaces in the path. If so, rename the directory to remove the white spaces and re-run the setup.
+    Note: Open the .bashrc file in User home directory to make sure that the alias command does not have any white spaces in the path. If so, rename the directory to remove the white spaces and re-run the setup.
 
 # Installation for Windows
 1. Clone GITS Repo
