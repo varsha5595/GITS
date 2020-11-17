@@ -14,12 +14,11 @@
 A survey sheet to capture their experience is also given: http://tiny.cc/xkuosz
  
 ## Challenges Addressed
-* To automate the logging process, we decided to timestamp the user attempts and write to an Attempts file every time the user compiles the program. The program also writes to the file if it is successfully compiled.The data collected from all the lab sessions can be found in the [LabSessionData](./LabSessionData/Attempts) folder
-* The files can be used for analysis of how long it took for them to debug compile errors/logical errors and how many attempts they took to successfully debug the code in Ruby and Go.
-* We also decided to stay on call despite the automation to observe their workflow.
-* There was a small test before the beginning of the debugging session to help us give an idea of the users familiarity with the language. 
-* To help with the  debug task, we have created a follow me file that answers all the questions: http://tiny.cc/i3oqsz
-
+* To make the implementation process uniform and to avoid any technical difficulty, we made the testers reserve a VCL instance to test the repository.
+* We also made sure that each of the testers ran both the commands from traditional git and our gits so that the analysis metrics would be standard
+* We also decided to stay on call to assist them with eny technical difficulties even though the documentation was comprehensive.
+* There was a small test before the beginning of the debugging session to help us give an idea of the users familiarity with the git syntaxes. 
+* To help with the  debug task, we have created a follow me file that answers all the questions: http://tiny.cc/gits
  
 ## Analysis
 The data collected from the lab sessions are tabulated in the this sheet: http://tiny.cc/pznqsz
