@@ -18,57 +18,58 @@
 * To help with the  debug task, we have created a follow me file that answers all the questions: http://tiny.cc/gits
  
 ## Analysis
-The data collected from the lab sessions are tabulated in the this sheet: http://tiny.cc/pznqsz
+The data collected from the lab sessions are tabulated in the this sheet: http://tiny.cc/4tt4tz
 
-# ![Data](./etc/data.PNG)
+# ![Data](./etc/data.png)
  
-The key metrics for comparing the three languages that are implemented are:
+The key metrics for comparing the traditional Git and the new GITS are:
 
-1. Number of attempts taken to debug the errors: Considering the average of the total number of attempts for each language, we get the following results:
+1. Number of commands executed: Considering the average of the total number of commands run by each tester, we get the following results:
 
-    * Ruby = 6 (10 people)
-    * Rust = 3 (8 people)
-    * Go = 4 (9 people)
+    * Git: 18.8
+    * GITS: 13.6
 
-    It is seen that not everyone was able to debug all the three languages in the time given. According to the data collected, the distribution of the data has high variance. So we propose that median is a better metric than mean to evaluate the languages.
+    It is seen that our proposed solution consumes lesser number of commands to perform the same tasks. Looking at the data, we see that there are some cases which has some anomalies. So we propose that median is a better metric than mean to evaluate the methods.
 
     Median for the number of attempts for all the languages:
 
-    * Ruby = 4.5 
-    * Rust = 3
-    * Go = 3
+    * Git = 20.5
+    * GITS = 12.5
  
-2. Total time taken to debug: Considering mean of the total time taken is shown below:
-    * Ruby = 11.3 mins
-    * Rust = 6.12 mins
-    * Go = 6 mins
+2. Total time taken to complete the tasks: Considering mean of the total time taken is shown below:
+    * Git = 10.3 mins
+    * GITS = 7.2 mins
 
     The corresponding median scores are as follows:
-    * Ruby = 13 mins
-    * Rust = 6 mins
-    * Go = 6 mins
+    * Git = 8 mins
+    * GITS = 7.5 mins
+  
+3. Total number of times the candidate referred to documentation: Considering the mean of total number of times the document was referred, we get the following values:
+    * Git = 9.2
+    * GITS = 7.2
+    
+    The corresponding median scores are as follows:
+    * Git = 11.5
+    * GITS = 7.5
 
-Considering both the metrics (1 and 2), it can be concluded that candidates found Ruby more difficult than the other two. They found Rust and Go equally difficult (but less than Ruby).
+Considering both the metrics (1, 2 and 3), it can be concluded that candidates found GITS easier than Git.
 
-# ![Data](./etc/metric.PNG)
+# ![Data](./etc/stats.png)
 
  
-3. Based on the pretest results and candidates’ feedback: The pretest tested the candidates knowledge of the three languages with 3 simple questions each. The results showed that most people were aware of Ruby. But the results above and the candidates feedback at the end of the session show that most people found Ruby difficult to debug. Hence, the pretest should have been more related to the bugs planted rather than simple questions.
+4. Based on the pretest results and candidates’ feedback: The pretest tested the candidates knowledge of traditional Git with 5 simple questions. The results showed that most people were aware of commands in Git. The results above and the candidates feedback at the end of the session show that most people found GITS better to work with because of the simplicity in doing rebase and syncing branches.
  
-4. Based on proctor’s feedback: Based on what we observed on the call, some of the candidates found Ruby difficult (around 4 people), some of them found Go difficult (around 3) and one person found Rust difficult. Two of them went systematically and debugged the codes. For a few candidates, the proctors had to give hints for them to trace the bug.
+5. Based on proctor’s feedback: Based on what we observed on the call, people referred to the documentation more often for GITS and tried doing the tasks on their own for Git. When we spoke to them, we realized that they liked Git because they were used to it but felt that GITS was simpler and reduces a lot of overhead on the user.
 
 ## Conclusion
-Based on all the metrics shown above, we conclude that Rust is the best language among the three chosen for this task. The final order of best to least suitable language for this purpose is Rust, Go and Ruby.
+Based on all the metrics shown above, we conclude that GITS is much simpler to use but a lot of users who are familiar with Git do not want to change to GITS except for some commands.
  
 ## Threats to validity
-* Testers have access to the working version of the code in github, which they can use to debug the code.
-* The pre test given does not contain equally challenging questions in all languages, which creates a bias.
-* The bug introduced in go was easier compared to Rust and Ruby.
-* The anomaly with the pre-test score and longer debug time may be because testers guessed the answers for the test
+* Testers have access to the Internet where they can search for answers for the pretest.
+* The pretest questioned the candidates on CLI commands and some users use the Git GUI which makes the questions biased towards the CLI tool.
+* Some users have more experience using Git than some other users which makes it easier for them and take lesser time to complete the tasks.
 
 ## Materials 
-1. The log files for Ruby and Go from the lab sessions can be found in the [LabSessions](./LabSessionData/Attempts) folder
-2. The survey sheet used to collect tester's feedback can be found this sheet: http://tiny.cc/xkuosz
-3. The data from the attempts file is tabulated for further analysis in this sheet: http://tiny.cc/pznqsz
-4. The instructions used to guide the lab activity can be found here: http://tiny.cc/i3oqsz
- 
+1. The data collected during the sessions can be found in: http://tiny.cc/4tt4tz
+2. The pretest sheet used to collect tester's knowledge can be found this sheet: http://tiny.cc/jvt4tz
+3. The instructions used to guide the lab activity can be found here: http://tiny.cc/kvt4tz
