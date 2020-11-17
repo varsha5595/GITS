@@ -1,17 +1,14 @@
-# Results for Homework 2 and Homework 3
+# Results for GITS
  
 ## Data collection method
 
-* After cloning the repository, the testers will find 3 folders named Ruby, Go and Rust. Each of the folders will contain “Game of Life” implemented in the respective programming languages
-* They change to the respective directories and follow the instructions in the readme to run each of the programs
-* The instructions provided help local installation but to save time we also gave them an option to run it in repl.it
-* The input scenarios have to be edited in the code directly and the examples have been highlighted through comments in each of the code
-* Log files named “Attempts” will be created through the program for ruby and golang which will be used for our analysis
-* For Rust, proctors manually noted on the number of attempts and the debug time
-* Note: Testers don’t have to edit or do anything with the files, they are automatically generated.
-* After the 30 minutes session, the testers will have to rename the "Attempts" file as attempts_language_token and upload it to a shared Google Drive location
-
-A survey sheet to capture their experience is also given: http://tiny.cc/xkuosz
+* As the project setup is complex for Windows, the testers are required to reserve an Ubuntu instance to ensure an easier setup
+* They need to install pip3 on the instance using apt
+* After cloning the GITS repository, they install the essential packages using requirements.txt and run the bash script project_init.sh. To ensure gits is successfully installed on the system, the testers can execute the command 'gits hello_world'
+* The testers are provided with a pretest, the results of which are used to assess their pre-existing knowledge on Git
+* The testers go through the instructions provided and perform the given tasks using Traditional Git, followed by GITS
+* The procedure for each tool requires the testers to create a new branch, create a new file, add content to the file and commit to a branch. Meanwhile, the proctor makes a change to the main branch and tester is required to rebase and finally merge the two branches.
+* For each of the source control tools, the proctors collect the information regarding the number of commands used to complete the task, the time taken to complete the task and the number of times the tester referred to the source control documentation. 
  
 ## Challenges Addressed
 * To make the implementation process uniform and to avoid any technical difficulty, we made the testers reserve a VCL instance to test the repository.
